@@ -25,7 +25,7 @@ UserSchema.pre('save', function(next) {
     };
 
   for (hobby in features) {
-    if (true || doc.hobbies.some((rec) => rec.name == hobby)) {
+    if (doc.hobbies.some((rec) => rec.name == hobby)) {
       doc.features = {...features[hobby] };
     }
   }
